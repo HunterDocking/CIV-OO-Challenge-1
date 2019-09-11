@@ -1,6 +1,6 @@
 ﻿using System;
+using Shapes.Classes;
 using NUnit.Framework;
-// remember to reference and import your shape library
 
 namespace Triangle_Tests {
     [TestFixture]

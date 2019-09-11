@@ -1,6 +1,6 @@
 ﻿using System;
+using Shapes.Classes;
 using NUnit.Framework;
-// remember to reference and import your shape library
 
 namespace Quadrilateral_Tests {
     [TestFixture]
@@ -10,7 +10,21 @@ namespace Quadrilateral_Tests {
        
         Square sq2 { get; set; }
         Rectangle rec2 { get; set; }
-       
+
+
+
+        //3. ADD TO EXISTING TESTS
+        //
+        //
+        Square sq3 { get; set; }
+        Square sq4 { get; set; }
+        Square sq5 { get; set; }
+
+        Rectangle rec3 { get; set; }
+        Rectangle rec4 { get; set; }
+        Rectangle rec5 { get; set; }
+
+
         [SetUp]
         public void Init() {
             sq1 = new Square("Blue", 4);
@@ -18,8 +32,23 @@ namespace Quadrilateral_Tests {
             
             sq2 = new Square("Blue", 6);
             rec2 = new Rectangle("Red", 5, 4);
+
+
+
+            //3. ADD TO EXISTING TESTS
+            //
+            //
+
+            sq3 = new Square("", 5);
+            sq4 = new Square("", 15);
+            sq5 = new Square("", 7);
+
+            rec3 = new Rectangle("", 5, 10);
+            rec4 = new Rectangle("", 4, 6);
+            rec5 = new Rectangle("", 9, 7);
+
         }
-        
+
         [Test]
         public void SquareTests() {
             int area = 16;
@@ -33,6 +62,30 @@ namespace Quadrilateral_Tests {
             
             Assert.AreEqual(area, sq2.GetArea());
             Assert.AreEqual(perimeter, sq2.GetPerimeter());
+
+
+
+            //3. ADD TO EXISTING TESTS
+            //
+            //
+
+            area = 25;
+            perimeter = 20;
+
+            Assert.AreEqual(area, sq3.GetArea());
+            Assert.AreEqual(perimeter, sq3.GetPerimeter());
+
+            area = 225;
+            perimeter = 60;
+
+            Assert.AreEqual(area, sq4.GetArea());
+            Assert.AreEqual(perimeter, sq4.GetPerimeter());
+
+            area = 49;
+            perimeter = 28;
+
+            Assert.AreEqual(area, sq5.GetArea());
+            Assert.AreEqual(perimeter, sq5.GetPerimeter());
 
         }
 
@@ -50,7 +103,30 @@ namespace Quadrilateral_Tests {
             Assert.AreEqual(area, rec2.GetArea());
             Assert.AreEqual(perimeter, rec2.GetPerimeter());
 
+
+
+            //3. ADD TO EXISTING TESTS
+            //
+            //
+
+            area = 50;
+            perimeter = 30;
+
+            Assert.AreEqual(area, rec3.GetArea());
+            Assert.AreEqual(perimeter, rec3.GetPerimeter());
+
+            area = 24;
+            perimeter = 20;
+
+            Assert.AreEqual(area, rec4.GetArea());
+            Assert.AreEqual(perimeter, rec4.GetPerimeter());
+
+            area = 63;
+            perimeter = 32;
+
+            Assert.AreEqual(area, rec5.GetArea());
+            Assert.AreEqual(perimeter, rec5.GetPerimeter());
         }
-        
+
     }
 }
