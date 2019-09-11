@@ -56,7 +56,11 @@ namespace Menu
                         Console.WriteLine();
                     } catch (FormatException line)
                     {
-                        Console.WriteLine("Incorrect format: " + line);
+                        Console.WriteLine("Incorrect format: " + line.Message);
+                    }
+                    catch (IntException line)
+                    {
+                        Console.WriteLine("Number <1: " + line.Message);
                     }
                     finally
                     {
@@ -102,11 +106,11 @@ namespace Menu
                         Console.WriteLine();
                     } catch (FormatException line)
                     {
-                        Console.WriteLine("Incorrect format: " + line);
+                        Console.WriteLine("Incorrect format: " + line.Message);
                     }
                     catch (IntException line)
                     {
-                        Console.WriteLine("Number <1: "+ line);
+                        Console.WriteLine("Number <1: "+ line.Message);
                     }
                     finally
                     {
